@@ -1,8 +1,8 @@
-var barColor = '#635bff';
-var sizeOfArray = 100;
-var delayTime = 10; // in ms
 var array = [];
+var sizeOfArray = 100;
 var complete = true;
+var barColor = '#635bff';
+var delayTime = 10; // in ms
 
 function getRandomNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
