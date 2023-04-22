@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="/SortingAlgorithm/faviconPic.png"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Sorting Algorithm Visualizer</title>
+    <script src="code.js" defer></script>
+    <script src="bubbleSort.js" ></script>
+    <script src="insertionSort.js" ></script>
+    <script src="mergeSort.js" ></script>
+    <script src="quickSort.js" ></script>
+    <script src="graphCreation.js" ></script>
+
+</head>
+
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+
+<body onload="reset()"></body>
+
+<h1>Sorting Algorithm Visualizer</h1>
+
+<div id="container" style="width:100%; height:720px;"></div>
+<input class="sort" type="button" value="Bubble Sort" onclick = "startSort(bubbleSort)">
+<input class="sort" type="button" value="Insertion Sort" onclick = "startSort(insertionSort)">
+<input class="sort" type="button" value="Quick Sort" onclick = "startSort(quickSort)">
+<input class="sort" type="button" value="Merge Sort" onclick = "startSort(mergeSort)">
+<input class="sort"  type="button" value="Scramble" onclick = "reset()">
+
+<p></p>
+
+<body>
+    <input type="range" id="slider" name="slider" class="slider" min="50" max="250" value="100">
+</body>
+
