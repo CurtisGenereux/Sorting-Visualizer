@@ -84,6 +84,31 @@ async function delayedSwap(i, j) {
 
 var slider = document.getElementById('slider');
 
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.getElementById('slider');
+
+    slider.addEventListener('input', debounce(function(event) {
+        sizeOfArray = parseInt(event.target.value, 10);
+
+        if (complete == true) {
+            newArray();
+            updateGraph();
+        }
+    }, 5));
+});
+
+function debounce(func, wait) {
+
+    let timeout;
+    return (...args) => {
+
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+            func.apply(this, args);
+        }, wait);
+    };
+}
+
 function abort() {
    throw new Error("This is not an error. This is just to abort javascript");
 }
