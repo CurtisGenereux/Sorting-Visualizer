@@ -97,18 +97,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 5));
 });
 
-function debounce(func, wait) {
-
-    let timeout;
-    return (...args) => {
-
-        clearTimeout(timeout);
-        timeout = setTimeout(() => {
-            func.apply(this, args);
-        }, wait);
+function debounce(func, waitTime) {
+    var timeout;
+    return function(...args) {
+        clearTimeout(timeout); 
+        timeout = setTimeout(function() {
+            func.apply(null, args);
+        }, waitTime); 
     };
 }
 
 function abort() {
-   throw new Error("This is not an error. This is just to abort javascript");
+   throw new Error("This is not an error. This is just to abort javascript.");
 }
